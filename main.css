@@ -1,0 +1,159 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.age-calc{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    border-radius: 12px;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom-right-radius: 170px;
+}
+@media (max-width:767px){
+    .age-calc{
+        max-width: 375px;
+        padding: 50px 20px;
+        border-bottom-right-radius: 100px;
+    }
+}
+.age-calc .input-field{
+    display: flex;
+}
+.age-calc .input-field .position-con{
+    position: relative;
+}
+.age-calc .input-field input{
+    width: 130px;
+    font-size: 24px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-weight: 700;
+    margin-right: 30px;
+    color: #8a8a8a;
+    cursor: pointer;
+}
+
+.age-calc .input-field input:focus{
+    outline: none;
+    border-color: hsl(259, 100%, 65%);
+    color: black;
+    font-weight: 700;
+}
+.age-calc .input-field input, textarea{
+    color: black;
+}
+.age-calc .input-field .section{
+    position: absolute;
+    top: -40%;
+    font-size: 12px;
+    color: #6c6c6c;
+}
+.age-calc .input-field .valid-input{
+    position: absolute;
+    bottom: -50%;
+    font-size: 12px;
+    color: hsl(0, 100%, 67%);
+    font-style: italic;
+    font-weight: 400 !important;
+    display: none;
+    z-index: 2;
+}
+@media (max-width:767px){
+    .age-calc .input-field input{
+      width: 100px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .age-calc .input-field .section{
+        font-size: 10px;
+        top: -35%;
+    }
+    .age-calc .input-field .valid-input{
+        top: 105%;
+        font-size: 10px;
+    }
+}
+.age-calc .calculation{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.calculation .line{
+    background-color: hsl(0, 0%, 86%);
+    flex-basis: 89%;
+    height: 1px;
+}
+.calculation .arrow{
+    background-color: hsl(259, 100%, 65%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.calculation .arrow:hover{
+    background-color: black;
+}
+.calculation .arrow img{
+    width: 35px;
+}
+.calculation .line:last-child{
+    display: none;
+}
+@media (max-width:767px){
+    .calculation{
+        margin: 40px 0px 10px;
+    }
+    .calculation .arrow{
+        width: 50px;
+        height: 50px;
+      }
+      .calculation .arrow img{
+        width: 23px;
+      }
+    .calculation .line{
+        flex-basis: 40%;
+    }
+    .calculation .line:last-child{
+        display: block;
+    }
+}
+.age-calc .out-put div{
+    font-size: 80px;
+    font-weight: 800;
+    font-style: italic;
+}
+.age-calc .out-put div span{
+    color: hsl(259, 100%, 65%);
+}
+@media (max-width:767px){
+    .age-calc .out-put div{
+        font-size: 50px;
+    }
+}
